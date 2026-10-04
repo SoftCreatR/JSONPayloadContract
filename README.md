@@ -1,9 +1,9 @@
 # JSON Payload Contract
 
 [![Tests](https://github.com/SoftCreatR/JSONPayloadContract/actions/workflows/tests.yml/badge.svg)](https://github.com/SoftCreatR/JSONPayloadContract/actions/workflows/tests.yml)
-[![Latest Stable Version](https://poser.pugx.org/softcreatr/json-payload-contract/v/stable)](https://packagist.org/packages/softcreatr/json-payload-contract)
-[![License](https://poser.pugx.org/softcreatr/json-payload-contract/license)](LICENSE)
-[![PHP Version Require](https://poser.pugx.org/softcreatr/json-payload-contract/require/php)](https://packagist.org/packages/softcreatr/json-payload-contract)
+[![Latest Stable Version](https://img.shields.io/packagist/v/softcreatr/json-payload-contract.svg)](https://packagist.org/packages/softcreatr/json-payload-contract)
+[![License](https://img.shields.io/packagist/l/softcreatr/json-payload-contract.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/softcreatr/json-payload-contract/php.svg)](https://packagist.org/packages/softcreatr/json-payload-contract)
 
 Extract stable, typed application data from changing and untrusted JSON payloads.
 
