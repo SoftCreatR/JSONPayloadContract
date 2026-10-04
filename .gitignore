@@ -1,0 +1,8 @@
+/.idea/
+/.php-cs-fixer.cache
+/.phpunit.cache/
+/build/
+/composer.lock
+/coverage.xml
+/junit.xml
+/vendor/

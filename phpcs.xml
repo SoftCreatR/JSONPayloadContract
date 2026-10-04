@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="JSON Payload Contract">
+    <description>Code style rules for JSON Payload Contract.</description>
+    <file>src</file>
+    <file>tests</file>
+    <file>examples</file>
+    <file>tools</file>
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+    <rule ref="PSR12"/>
+</ruleset>

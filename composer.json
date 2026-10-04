@@ -1,0 +1,99 @@
+{
+  "name": "softcreatr/json-payload-contract",
+  "description": "Extract stable, typed data from evolving JSON payloads",
+  "license": "ISC",
+  "type": "library",
+  "keywords": [
+    "api",
+    "contract",
+    "json",
+    "jsonpath",
+    "payload",
+    "validation"
+  ],
+  "authors": [
+    {
+      "name": "Sascha Greuel",
+      "email": "hello@1-2.dev",
+      "homepage": "https://1-2.dev",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/SoftCreatR/JSONPayloadContract/issues",
+    "source": "https://github.com/SoftCreatR/JSONPayloadContract"
+  },
+  "require": {
+    "php": "^8.3",
+    "ext-filter": "*",
+    "ext-json": "*",
+    "softcreatr/jsonpath": "^2.1"
+  },
+  "require-dev": {
+    "ext-simplexml": "*",
+    "friendsofphp/php-cs-fixer": "^3.92",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^12.0",
+    "squizlabs/php_codesniffer": "^4.0"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "SoftCreatR\\JsonPayloadContract\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SoftCreatR\\JsonPayloadContract\\Tests\\": "tests/"
+    }
+  },
+  "archive": {
+    "exclude": [
+      "/.github/",
+      "/.gitignore",
+      "/.idea/",
+      "/.php-cs-fixer.cache",
+      "/.php-cs-fixer.dist.php",
+      "/.phpunit.cache/",
+      "/build/",
+      "/composer.lock",
+      "/coverage.xml",
+      "/phpcs.xml",
+      "/phpstan.neon.dist",
+      "/phpunit.xml.dist",
+      "/tests/",
+      "/tools/",
+      "/vendor/"
+    ]
+  },
+  "config": {
+    "allow-plugins": false,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.3.0"
+    },
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "scripts": {
+    "benchmark": "php tools/benchmark.php",
+    "check": [
+      "@coverage",
+      "@phpstan",
+      "@cs"
+    ],
+    "coverage": [
+      "php tools/run-coverage.php",
+      "@coverage:check"
+    ],
+    "coverage:check": "php tools/assert-coverage.php coverage.xml",
+    "cs": [
+      "phpcs",
+      "php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff"
+    ],
+    "cs-fix": "php-cs-fixer fix --config=.php-cs-fixer.dist.php",
+    "phpstan": "phpstan analyse --no-progress -c phpstan.neon.dist",
+    "test": "phpunit"
+  }
+}
