@@ -81,8 +81,8 @@ Use JSON Schema when the JSON document itself is the public artifact and full sc
 
 ## Requirements
 
-- PHP 8.3 or newer
-- `softcreatr/jsonpath` 2.1 or newer
+- PHP 8.2 or newer
+- `softcreatr/jsonpath` 2.2.1 or newer in the 2.x line
 
 ## Installation
 

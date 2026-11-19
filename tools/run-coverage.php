@@ -21,7 +21,15 @@ if (!\extension_loaded('xdebug')) {
             ...$windowsCandidates,
         ]
         : [];
-    $xdebug = \array_find($candidates, static fn(string $candidate): bool => \is_file($candidate));
+    $xdebug = null;
+
+    foreach ($candidates as $candidate) {
+        if (\is_file($candidate)) {
+            $xdebug = $candidate;
+
+            break;
+        }
+    }
 
     if ($xdebug === null) {
         \fwrite(STDERR, "Xdebug is required to verify coverage.\n");

@@ -17,19 +17,40 @@ use SoftCreatR\JsonPayloadContract\Exception\ContractDefinitionException;
  */
 final readonly class ResourceLimits
 {
-    public const int DEFAULT_MAX_JSON_BYTES = 16_777_216;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_JSON_BYTES = 16_777_216;
 
-    public const int DEFAULT_MAX_JSON_DEPTH = 64;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_JSON_DEPTH = 64;
 
-    public const int DEFAULT_MAX_MATCHES_PER_FIELD = 10_000;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_MATCHES_PER_FIELD = 10_000;
 
-    public const int DEFAULT_MAX_INPUT_NODES = 100_000;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_INPUT_NODES = 100_000;
 
-    public const int DEFAULT_MAX_SELECTOR_BYTES = 4_096;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_SELECTOR_BYTES = 4_096;
 
-    public const int DEFAULT_MAX_EVALUATION_STEPS = 1_000_000;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_EVALUATION_STEPS = 1_000_000;
 
-    public const int DEFAULT_MAX_VIOLATIONS = 1_000;
+    /**
+     * @var int
+     */
+    public const DEFAULT_MAX_VIOLATIONS = 1_000;
 
     /**
      * @var positive-int

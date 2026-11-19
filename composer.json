@@ -24,17 +24,18 @@
     "source": "https://github.com/SoftCreatR/JSONPayloadContract"
   },
   "require": {
-    "php": "^8.3",
+    "php": "^8.2",
     "ext-filter": "*",
     "ext-json": "*",
-    "softcreatr/jsonpath": "^2.1"
+    "softcreatr/jsonpath": "^2.2.1"
   },
   "require-dev": {
     "ext-simplexml": "*",
     "friendsofphp/php-cs-fixer": "^3.92",
     "phpstan/phpstan": "^2.1",
-    "phpunit/phpunit": "^12.0",
-    "squizlabs/php_codesniffer": "^4.0"
+    "phpunit/phpunit": "^11.5.50 || ^12.5.8",
+    "symfony/filesystem": "^5.4.56 || ^6.4.50 || ^7.4.23 || ^8.1.11",
+    "symfony/process": "^5.4.51 || ^6.4.33 || ^7.3.11 || ^8.0.5"
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
@@ -59,7 +60,6 @@
       "/build/",
       "/composer.lock",
       "/coverage.xml",
-      "/phpcs.xml",
       "/phpstan.neon.dist",
       "/phpunit.xml.dist",
       "/tests/",
@@ -71,7 +71,7 @@
     "allow-plugins": false,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.3.0"
+      "php": "8.2.0"
     },
     "preferred-install": "dist",
     "sort-packages": true
@@ -88,10 +88,7 @@
       "@coverage:check"
     ],
     "coverage:check": "php tools/assert-coverage.php coverage.xml",
-    "cs": [
-      "phpcs",
-      "php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff"
-    ],
+    "cs": "php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff",
     "cs-fix": "php-cs-fixer fix --config=.php-cs-fixer.dist.php",
     "phpstan": "phpstan analyse --no-progress -c phpstan.neon.dist",
     "test": "phpunit"
